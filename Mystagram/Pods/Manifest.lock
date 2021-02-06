@@ -1,0 +1,50 @@
+PODS:
+  - JGProgressHUD (2.2)
+  - RxCocoa (6.0.0):
+    - RxRelay (= 6.0.0)
+    - RxSwift (= 6.0.0)
+  - RxOptional (5.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.0.0):
+    - RxSwift (= 6.0.0)
+  - RxSwift (6.0.0)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SnapKit (5.0.1)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - SDWebImage
+  - SnapKit
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - JGProgressHUD
+    - RxCocoa
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SnapKit
+    - Toaster
+
+SPEC CHECKSUMS:
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
+  RxOptional: cb0b05f0270854eb8ac322c4eb298c4945469fab
+  RxRelay: 8d593be109c06ea850df027351beba614b012ffb
+  RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: 1dcc66e20062cafe253e05f009c43e9f227c7fbb
+
+COCOAPODS: 1.8.4

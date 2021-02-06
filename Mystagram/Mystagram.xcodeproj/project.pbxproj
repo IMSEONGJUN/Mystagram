@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52D9BFE850273835785E67B7 /* Pods_Mystagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D402FE5C1CE1AC659B42B3 /* Pods_Mystagram.framework */; };
+		91D3DA23CBF981A3BD4790A4 /* Pods_MystagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC46503B3A424CDB072B0AFE /* Pods_MystagramTests.framework */; };
+		CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7C925CE693300F97928 /* AppDelegate.swift */; };
+		CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7CB25CE693300F97928 /* SceneDelegate.swift */; };
+		CECAF7CE25CE693300F97928 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7CD25CE693300F97928 /* ViewController.swift */; };
+		CECAF7D125CE693300F97928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7CF25CE693300F97928 /* Main.storyboard */; };
+		CECAF7D325CE693400F97928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7D225CE693400F97928 /* Assets.xcassets */; };
+		CECAF7D625CE693400F97928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */; };
+		CECAF7E125CE693400F97928 /* MystagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7E025CE693400F97928 /* MystagramTests.swift */; };
+		CECAF7EC25CE693400F97928 /* MystagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7EB25CE693400F97928 /* MystagramUITests.swift */; };
+		ED37EACDA3CD2ADBF758CD34 /* Pods_Mystagram_MystagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B156B7C2C49CB3A6D2FF07E /* Pods_Mystagram_MystagramUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CECAF7DD25CE693400F97928 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECAF7BE25CE693300F97928 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECAF7C525CE693300F97928;
+			remoteInfo = Mystagram;
+		};
+		CECAF7E825CE693400F97928 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECAF7BE25CE693300F97928 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECAF7C525CE693300F97928;
+			remoteInfo = Mystagram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		101C1450C4470A993AB1E859 /* Pods-Mystagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram.debug.xcconfig"; path = "Target Support Files/Pods-Mystagram/Pods-Mystagram.debug.xcconfig"; sourceTree = "<group>"; };
+		45E97C59B2D5A9F239F9EBFC /* Pods-Mystagram-MystagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram-MystagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		46D402FE5C1CE1AC659B42B3 /* Pods_Mystagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mystagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD487924BC318437A5FE429 /* Pods-MystagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MystagramTests.release.xcconfig"; path = "Target Support Files/Pods-MystagramTests/Pods-MystagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		81C7FFE03F743B6C76D44A63 /* Pods-MystagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MystagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MystagramTests/Pods-MystagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B156B7C2C49CB3A6D2FF07E /* Pods_Mystagram_MystagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mystagram_MystagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC46503B3A424CDB072B0AFE /* Pods_MystagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MystagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAF7C625CE693300F97928 /* Mystagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mystagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAF7C925CE693300F97928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CECAF7CB25CE693300F97928 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CECAF7CD25CE693300F97928 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CECAF7D025CE693300F97928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CECAF7D225CE693400F97928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CECAF7D525CE693400F97928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CECAF7D725CE693400F97928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECAF7DC25CE693400F97928 /* MystagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MystagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAF7E025CE693400F97928 /* MystagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MystagramTests.swift; sourceTree = "<group>"; };
+		CECAF7E225CE693400F97928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECAF7E725CE693400F97928 /* MystagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MystagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECAF7EB25CE693400F97928 /* MystagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MystagramUITests.swift; sourceTree = "<group>"; };
+		CECAF7ED25CE693400F97928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8FAA27C7EE7E2BD9A608D1C /* Pods-Mystagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram.release.xcconfig"; path = "Target Support Files/Pods-Mystagram/Pods-Mystagram.release.xcconfig"; sourceTree = "<group>"; };
+		EADE61BF01936D1E9B679877 /* Pods-Mystagram-MystagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram-MystagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CECAF7C325CE693300F97928 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D9BFE850273835785E67B7 /* Pods_Mystagram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7D925CE693400F97928 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D3DA23CBF981A3BD4790A4 /* Pods_MystagramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7E425CE693400F97928 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED37EACDA3CD2ADBF758CD34 /* Pods_Mystagram_MystagramUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4B8D4BD9424B69B5E3BE16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				101C1450C4470A993AB1E859 /* Pods-Mystagram.debug.xcconfig */,
+				D8FAA27C7EE7E2BD9A608D1C /* Pods-Mystagram.release.xcconfig */,
+				45E97C59B2D5A9F239F9EBFC /* Pods-Mystagram-MystagramUITests.debug.xcconfig */,
+				EADE61BF01936D1E9B679877 /* Pods-Mystagram-MystagramUITests.release.xcconfig */,
+				81C7FFE03F743B6C76D44A63 /* Pods-MystagramTests.debug.xcconfig */,
+				4CD487924BC318437A5FE429 /* Pods-MystagramTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D0F30652B15CD7F60C5F541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46D402FE5C1CE1AC659B42B3 /* Pods_Mystagram.framework */,
+				9B156B7C2C49CB3A6D2FF07E /* Pods_Mystagram_MystagramUITests.framework */,
+				BC46503B3A424CDB072B0AFE /* Pods_MystagramTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECAF7BD25CE693300F97928 = {
+			isa = PBXGroup;
+			children = (
+				CECAF7C825CE693300F97928 /* Mystagram */,
+				CECAF7DF25CE693400F97928 /* MystagramTests */,
+				CECAF7EA25CE693400F97928 /* MystagramUITests */,
+				CECAF7C725CE693300F97928 /* Products */,
+				3B4B8D4BD9424B69B5E3BE16 /* Pods */,
+				9D0F30652B15CD7F60C5F541 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CECAF7C725CE693300F97928 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF7C625CE693300F97928 /* Mystagram.app */,
+				CECAF7DC25CE693400F97928 /* MystagramTests.xctest */,
+				CECAF7E725CE693400F97928 /* MystagramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CECAF7C825CE693300F97928 /* Mystagram */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF7C925CE693300F97928 /* AppDelegate.swift */,
+				CECAF7CB25CE693300F97928 /* SceneDelegate.swift */,
+				CECAF7CD25CE693300F97928 /* ViewController.swift */,
+				CECAF7CF25CE693300F97928 /* Main.storyboard */,
+				CECAF7D225CE693400F97928 /* Assets.xcassets */,
+				CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */,
+				CECAF7D725CE693400F97928 /* Info.plist */,
+			);
+			path = Mystagram;
+			sourceTree = "<group>";
+		};
+		CECAF7DF25CE693400F97928 /* MystagramTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF7E025CE693400F97928 /* MystagramTests.swift */,
+				CECAF7E225CE693400F97928 /* Info.plist */,
+			);
+			path = MystagramTests;
+			sourceTree = "<group>";
+		};
+		CECAF7EA25CE693400F97928 /* MystagramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CECAF7EB25CE693400F97928 /* MystagramUITests.swift */,
+				CECAF7ED25CE693400F97928 /* Info.plist */,
+			);
+			path = MystagramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CECAF7C525CE693300F97928 /* Mystagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAF7F025CE693400F97928 /* Build configuration list for PBXNativeTarget "Mystagram" */;
+			buildPhases = (
+				84F67225F82252AA9E5F1F19 /* [CP] Check Pods Manifest.lock */,
+				CECAF7C225CE693300F97928 /* Sources */,
+				CECAF7C325CE693300F97928 /* Frameworks */,
+				CECAF7C425CE693300F97928 /* Resources */,
+				EF66FC3886FA59A293B8A39A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mystagram;
+			productName = Mystagram;
+			productReference = CECAF7C625CE693300F97928 /* Mystagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CECAF7DB25CE693400F97928 /* MystagramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAF7F325CE693400F97928 /* Build configuration list for PBXNativeTarget "MystagramTests" */;
+			buildPhases = (
+				D4C7F95BA5F81D1068C0D251 /* [CP] Check Pods Manifest.lock */,
+				CECAF7D825CE693400F97928 /* Sources */,
+				CECAF7D925CE693400F97928 /* Frameworks */,
+				CECAF7DA25CE693400F97928 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECAF7DE25CE693400F97928 /* PBXTargetDependency */,
+			);
+			name = MystagramTests;
+			productName = MystagramTests;
+			productReference = CECAF7DC25CE693400F97928 /* MystagramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CECAF7E625CE693400F97928 /* MystagramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECAF7F625CE693400F97928 /* Build configuration list for PBXNativeTarget "MystagramUITests" */;
+			buildPhases = (
+				6F1D6543331B934560D254FE /* [CP] Check Pods Manifest.lock */,
+				CECAF7E325CE693400F97928 /* Sources */,
+				CECAF7E425CE693400F97928 /* Frameworks */,
+				CECAF7E525CE693400F97928 /* Resources */,
+				C7EE0F0DD680AA196FB1B33F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECAF7E925CE693400F97928 /* PBXTargetDependency */,
+			);
+			name = MystagramUITests;
+			productName = MystagramUITests;
+			productReference = CECAF7E725CE693400F97928 /* MystagramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CECAF7BE25CE693300F97928 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CECAF7C525CE693300F97928 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CECAF7DB25CE693400F97928 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CECAF7C525CE693300F97928;
+					};
+					CECAF7E625CE693400F97928 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CECAF7C525CE693300F97928;
+					};
+				};
+			};
+			buildConfigurationList = CECAF7C125CE693300F97928 /* Build configuration list for PBXProject "Mystagram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CECAF7BD25CE693300F97928;
+			productRefGroup = CECAF7C725CE693300F97928 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CECAF7C525CE693300F97928 /* Mystagram */,
+				CECAF7DB25CE693400F97928 /* MystagramTests */,
+				CECAF7E625CE693400F97928 /* MystagramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CECAF7C425CE693300F97928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAF7D625CE693400F97928 /* LaunchScreen.storyboard in Resources */,
+				CECAF7D325CE693400F97928 /* Assets.xcassets in Resources */,
+				CECAF7D125CE693300F97928 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7DA25CE693400F97928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7E525CE693400F97928 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F1D6543331B934560D254FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mystagram-MystagramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84F67225F82252AA9E5F1F19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mystagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7EE0F0DD680AA196FB1B33F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C7F95BA5F81D1068C0D251 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MystagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF66FC3886FA59A293B8A39A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mystagram/Pods-Mystagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mystagram/Pods-Mystagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mystagram/Pods-Mystagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CECAF7C225CE693300F97928 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAF7CE25CE693300F97928 /* ViewController.swift in Sources */,
+				CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */,
+				CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7D825CE693400F97928 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAF7E125CE693400F97928 /* MystagramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECAF7E325CE693400F97928 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECAF7EC25CE693400F97928 /* MystagramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECAF7DE25CE693400F97928 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECAF7C525CE693300F97928 /* Mystagram */;
+			targetProxy = CECAF7DD25CE693400F97928 /* PBXContainerItemProxy */;
+		};
+		CECAF7E925CE693400F97928 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECAF7C525CE693300F97928 /* Mystagram */;
+			targetProxy = CECAF7E825CE693400F97928 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CECAF7CF25CE693300F97928 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECAF7D025CE693300F97928 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECAF7D525CE693400F97928 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CECAF7EE25CE693400F97928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CECAF7EF25CE693400F97928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CECAF7F125CE693400F97928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 101C1450C4470A993AB1E859 /* Pods-Mystagram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = Mystagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.Mystagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CECAF7F225CE693400F97928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FAA27C7EE7E2BD9A608D1C /* Pods-Mystagram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = Mystagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.Mystagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CECAF7F425CE693400F97928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81C7FFE03F743B6C76D44A63 /* Pods-MystagramTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = MystagramTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.MystagramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mystagram.app/Mystagram";
+			};
+			name = Debug;
+		};
+		CECAF7F525CE693400F97928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD487924BC318437A5FE429 /* Pods-MystagramTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = MystagramTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.MystagramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mystagram.app/Mystagram";
+			};
+			name = Release;
+		};
+		CECAF7F725CE693400F97928 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E97C59B2D5A9F239F9EBFC /* Pods-Mystagram-MystagramUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = MystagramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.MystagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mystagram;
+			};
+			name = Debug;
+		};
+		CECAF7F825CE693400F97928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EADE61BF01936D1E9B679877 /* Pods-Mystagram-MystagramUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADHC8G6NHC;
+				INFOPLIST_FILE = MystagramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.seongjunIm.www.MystagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mystagram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CECAF7C125CE693300F97928 /* Build configuration list for PBXProject "Mystagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAF7EE25CE693400F97928 /* Debug */,
+				CECAF7EF25CE693400F97928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECAF7F025CE693400F97928 /* Build configuration list for PBXNativeTarget "Mystagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAF7F125CE693400F97928 /* Debug */,
+				CECAF7F225CE693400F97928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECAF7F325CE693400F97928 /* Build configuration list for PBXNativeTarget "MystagramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAF7F425CE693400F97928 /* Debug */,
+				CECAF7F525CE693400F97928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECAF7F625CE693400F97928 /* Build configuration list for PBXNativeTarget "MystagramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECAF7F725CE693400F97928 /* Debug */,
+				CECAF7F825CE693400F97928 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CECAF7BE25CE693300F97928 /* Project object */;
+}
