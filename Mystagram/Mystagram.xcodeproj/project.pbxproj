@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		52D9BFE850273835785E67B7 /* Pods_Mystagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D402FE5C1CE1AC659B42B3 /* Pods_Mystagram.framework */; };
 		91D3DA23CBF981A3BD4790A4 /* Pods_MystagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC46503B3A424CDB072B0AFE /* Pods_MystagramTests.framework */; };
+		CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */; };
+		CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D425CFFB5A00AE212D /* FeedController.swift */; };
+		CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */; };
 		CEAE762125CE9FA10038D3DD /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE762025CE9FA10038D3DD /* ViewType.swift */; };
 		CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE762525CEA1120038D3DD /* ViewModelType.swift */; };
 		CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7C925CE693300F97928 /* AppDelegate.swift */; };
 		CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7CB25CE693300F97928 /* SceneDelegate.swift */; };
-		CECAF7CE25CE693300F97928 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7CD25CE693300F97928 /* ViewController.swift */; };
 		CECAF7D125CE693300F97928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7CF25CE693300F97928 /* Main.storyboard */; };
 		CECAF7D325CE693400F97928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7D225CE693400F97928 /* Assets.xcassets */; };
 		CECAF7D625CE693400F97928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */; };
@@ -47,12 +49,14 @@
 		81C7FFE03F743B6C76D44A63 /* Pods-MystagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MystagramTests.debug.xcconfig"; path = "Target Support Files/Pods-MystagramTests/Pods-MystagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B156B7C2C49CB3A6D2FF07E /* Pods_Mystagram_MystagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mystagram_MystagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC46503B3A424CDB072B0AFE /* Pods_MystagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MystagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CE3471D425CFFB5A00AE212D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		CEAE762025CE9FA10038D3DD /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		CEAE762525CEA1120038D3DD /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		CECAF7C625CE693300F97928 /* Mystagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mystagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECAF7C925CE693300F97928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECAF7CB25CE693300F97928 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CECAF7CD25CE693300F97928 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CECAF7D025CE693300F97928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CECAF7D225CE693400F97928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECAF7D525CE693400F97928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		CEAE761625CE9E250038D3DD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,7 +172,8 @@
 		CEAE761B25CE9E650038D3DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CECAF7CD25CE693300F97928 /* ViewController.swift */,
+				CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */,
+				CE3471D425CFFB5A00AE212D /* FeedController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,8 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECAF7CE25CE693300F97928 /* ViewController.swift in Sources */,
+				CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */,
 				CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */,
+				CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */,
+				CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */,
 				CEAE762125CE9FA10038D3DD /* ViewType.swift in Sources */,
 				CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */,
 				CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */,
