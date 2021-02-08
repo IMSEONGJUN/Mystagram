@@ -20,6 +20,7 @@
 		CE3471FB25D0D04100AE212D /* ImageSelectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471FA25D0D04100AE212D /* ImageSelectViewModel.swift */; };
 		CE34720025D0D05300AE212D /* NotiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471FF25D0D05300AE212D /* NotiViewModel.swift */; };
 		CE34720525D0D06700AE212D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34720425D0D06700AE212D /* ProfileViewModel.swift */; };
+		CE34721325D0D8A000AE212D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE34721225D0D8A000AE212D /* GoogleService-Info.plist */; };
 		CEAE762125CE9FA10038D3DD /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE762025CE9FA10038D3DD /* ViewType.swift */; };
 		CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE762525CEA1120038D3DD /* ViewModelType.swift */; };
 		CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7C925CE693300F97928 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		CE3471FA25D0D04100AE212D /* ImageSelectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewModel.swift; sourceTree = "<group>"; };
 		CE3471FF25D0D05300AE212D /* NotiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiViewModel.swift; sourceTree = "<group>"; };
 		CE34720425D0D06700AE212D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CE34721225D0D8A000AE212D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEAE762025CE9FA10038D3DD /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		CEAE762525CEA1120038D3DD /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		CECAF7C625CE693300F97928 /* Mystagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mystagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE34722F25D0DA5F00AE212D /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
 		CEAE761425CE9E070038D3DD /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +200,7 @@
 		CEAE761B25CE9E650038D3DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */,
+				CE34722F25D0DA5F00AE212D /* MainTabBar */,
 				CE3471D425CFFB5A00AE212D /* FeedController.swift */,
 				CE3471E125D0CFBB00AE212D /* SearchController.swift */,
 				CE3471EB25D0CFF800AE212D /* ImageSelectController.swift */,
@@ -243,6 +253,7 @@
 				CECAF7D225CE693400F97928 /* Assets.xcassets */,
 				CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */,
 				CECAF7D725CE693400F97928 /* Info.plist */,
+				CE34721225D0D8A000AE212D /* GoogleService-Info.plist */,
 			);
 			path = Mystagram;
 			sourceTree = "<group>";
@@ -373,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE34721325D0D8A000AE212D /* GoogleService-Info.plist in Resources */,
 				CECAF7D625CE693400F97928 /* LaunchScreen.storyboard in Resources */,
 				CECAF7D325CE693400F97928 /* Assets.xcassets in Resources */,
 			);
