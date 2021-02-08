@@ -1,26 +1,27 @@
 //
-//  FeedController.swift
+//  NotiController.swift
 //  Mystagram
 //
-//  Created by SEONGJUN on 2021/02/07.
+//  Created by SEONGJUN on 2021/02/08.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-protocol FeedViewModelBindable: ViewModelType {
+protocol NotiViewModelBindable: ViewModelType {
     
 }
 
-class FeedController: UIViewController, ViewType {
-    
-    var viewModel: FeedViewModelBindable!
+
+class NotiController: UIViewController, ViewType {
+
+    var viewModel: NotiViewModelBindable!
     var disposeBag: DisposeBag!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemBlue
     }
     
     func setupUI() {
@@ -30,5 +31,6 @@ class FeedController: UIViewController, ViewType {
     func bind() {
         
     }
+
 
 }
