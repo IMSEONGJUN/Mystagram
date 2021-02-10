@@ -7,6 +7,6 @@
 
 import Foundation
 
-class SearchViewModel: SearchViewModelBindable {
+struct SearchViewModel: SearchViewModelBindable {
     
 }

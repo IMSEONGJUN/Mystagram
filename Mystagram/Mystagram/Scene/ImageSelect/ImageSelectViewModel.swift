@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ImageSelectViewModel: ImageSelectViewModelBindable {
+struct ImageSelectViewModel: ImageSelectViewModelBindable {
     
 }

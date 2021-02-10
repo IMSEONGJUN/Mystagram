@@ -1,5 +1,5 @@
 //
-//  ProfileViewModel.swift
+//  NotiViewModel.swift
 //  Mystagram
 //
 //  Created by SEONGJUN on 2021/02/08.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ProfileViewModel: ProfileViewModelBindable {
-
+struct NotiViewModel: NotiViewModelBindable {
+    
 }

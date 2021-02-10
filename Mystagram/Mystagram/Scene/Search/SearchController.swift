@@ -18,7 +18,6 @@ class SearchController: UIViewController, ViewType {
     var viewModel: SearchViewModelBindable!
     var disposeBag: DisposeBag!
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,6 +7,6 @@
 
 import Foundation
 
-class FeedViewModel: FeedViewModelBindable {
+struct FeedViewModel: FeedViewModelBindable {
     
 }
