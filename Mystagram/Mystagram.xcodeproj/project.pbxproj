@@ -12,6 +12,7 @@
 		CE25AAFC25D3A70B001D178E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AAFB25D3A70B001D178E /* FeedCell.swift */; };
 		CE25AB0425D3A7A2001D178E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB0325D3A7A2001D178E /* Reusable.swift */; };
 		CE25AB1425D3A9F0001D178E /* Reactive+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */; };
+		CE25AB1C25D3BE99001D178E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB1B25D3BE99001D178E /* UIHelper.swift */; };
 		CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */; };
 		CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D425CFFB5A00AE212D /* FeedController.swift */; };
 		CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */; };
@@ -63,6 +64,7 @@
 		CE25AAFB25D3A70B001D178E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		CE25AB0325D3A7A2001D178E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Ext.swift"; sourceTree = "<group>"; };
+		CE25AB1B25D3BE99001D178E /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE3471D425CFFB5A00AE212D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		CEAE761A25CE9E310038D3DD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CE25AB1B25D3BE99001D178E /* UIHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */,
 				CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */,
 				CE3471F125D0D01B00AE212D /* NotiController.swift in Sources */,
+				CE25AB1C25D3BE99001D178E /* UIHelper.swift in Sources */,
 				CE25AAFC25D3A70B001D178E /* FeedCell.swift in Sources */,
 				CE3471FB25D0D04100AE212D /* ImageSelectViewModel.swift in Sources */,
 				CE3471F625D0D02C00AE212D /* ProfileController.swift in Sources */,
