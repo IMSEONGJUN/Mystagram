@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Firebase
 
-typealias Register = (email: String, fullName: String, userType: String, password: String)
+typealias RegisterInfo = (email: String, fullName: String, userType: String, password: String)
 
 struct RegistrationViewModel: RegistrationViewModelBindable {
     

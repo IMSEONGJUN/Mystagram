@@ -46,7 +46,7 @@ final class AuthManager {
     }
     
     // MARK: - Registration Logic
-    func performRegistration(values: Register) -> Observable<Bool> {
+    func performRegistration(values: RegisterInfo) -> Observable<Bool> {
         return Observable.create { (observer) -> Disposable in
             Auth.auth().createUser(withEmail: values.email, password: values.password) { (result, error) in
                 if let error = error {
@@ -65,7 +65,7 @@ final class AuthManager {
         
     }
     
-    private func saveInfoToFirestore(values: Register) -> Observable<Bool> {
+    private func saveInfoToFirestore(values: RegisterInfo) -> Observable<Bool> {
         let uid = Auth.auth().currentUser?.uid ?? ""
         
         let docData:[String: Any] = [
