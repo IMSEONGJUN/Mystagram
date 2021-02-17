@@ -21,8 +21,7 @@ struct UIHelper {
         layout.minimumInteritemSpacing = itemSpacing
         layout.minimumLineSpacing = lineSpacing
         layout.sectionInset = inset
-        layout.estimatedItemSize = CGSize(width: itemWidth, height: itemWidth + 40 + 8 + 8 + 110)
-//        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40 + 8 + 8 + 110)
         layout.scrollDirection = .vertical
         return layout
     }

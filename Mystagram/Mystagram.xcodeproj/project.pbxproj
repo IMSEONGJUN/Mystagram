@@ -195,8 +195,8 @@
 		CE25AB0B25D3A8A2001D178E /* ImageSelect */ = {
 			isa = PBXGroup;
 			children = (
-				CE3471FA25D0D04100AE212D /* ImageSelectViewModel.swift */,
 				CE3471EB25D0CFF800AE212D /* ImageSelectController.swift */,
+				CE3471FA25D0D04100AE212D /* ImageSelectViewModel.swift */,
 			);
 			path = ImageSelect;
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 		CE25AB0C25D3A8B7001D178E /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				CE3471FF25D0D05300AE212D /* NotiViewModel.swift */,
 				CE3471F025D0D01B00AE212D /* NotiController.swift */,
+				CE3471FF25D0D05300AE212D /* NotiViewModel.swift */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
