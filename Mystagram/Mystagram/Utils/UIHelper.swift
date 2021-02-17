@@ -13,7 +13,7 @@ struct UIHelper {
         let inset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let itemsInLine: CGFloat = 1
         let itemSpacing: CGFloat = 0
-        let lineSpacing: CGFloat = 0
+        let lineSpacing: CGFloat = 8
         let availableWidth = collectionViewWidth - ((itemSpacing * (itemsInLine - 1)) + (inset.left + inset.right))
         let itemWidth = availableWidth / itemsInLine
         
