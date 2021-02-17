@@ -13,6 +13,16 @@
 		CE25AB0425D3A7A2001D178E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB0325D3A7A2001D178E /* Reusable.swift */; };
 		CE25AB1425D3A9F0001D178E /* Reactive+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */; };
 		CE25AB1C25D3BE99001D178E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB1B25D3BE99001D178E /* UIHelper.swift */; };
+		CE25AB2825DD2925001D178E /* CustomButtonForAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB2725DD2925001D178E /* CustomButtonForAuth.swift */; };
+		CE25AB2D25DD2963001D178E /* GeneralConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB2C25DD2963001D178E /* GeneralConfirmButton.swift */; };
+		CE25AB3225DD2995001D178E /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB3125DD2995001D178E /* InputTextField.swift */; };
+		CE25AB3A25DD2B37001D178E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB3925DD2B37001D178E /* LoginController.swift */; };
+		CE25AB3F25DD2B46001D178E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB3E25DD2B45001D178E /* LoginViewModel.swift */; };
+		CE25AB4425DD2B86001D178E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB4325DD2B86001D178E /* AuthManager.swift */; };
+		CE25AB4B25DD2BE9001D178E /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB4A25DD2BE9001D178E /* InputContainerView.swift */; };
+		CE25AB5325DD2C27001D178E /* Global+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB5225DD2C27001D178E /* Global+Ext.swift */; };
+		CE25AB9425DD49CF001D178E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB9325DD49CF001D178E /* RegistrationController.swift */; };
+		CE25AB9C25DD4B14001D178E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB9B25DD4B14001D178E /* RegistrationViewModel.swift */; };
 		CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */; };
 		CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D425CFFB5A00AE212D /* FeedController.swift */; };
 		CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */; };
@@ -65,6 +75,16 @@
 		CE25AB0325D3A7A2001D178E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Ext.swift"; sourceTree = "<group>"; };
 		CE25AB1B25D3BE99001D178E /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		CE25AB2725DD2925001D178E /* CustomButtonForAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonForAuth.swift; sourceTree = "<group>"; };
+		CE25AB2C25DD2963001D178E /* GeneralConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConfirmButton.swift; sourceTree = "<group>"; };
+		CE25AB3125DD2995001D178E /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		CE25AB3925DD2B37001D178E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CE25AB3E25DD2B45001D178E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CE25AB4325DD2B86001D178E /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CE25AB4A25DD2BE9001D178E /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		CE25AB5225DD2C27001D178E /* Global+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global+Ext.swift"; sourceTree = "<group>"; };
+		CE25AB9325DD49CF001D178E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		CE25AB9B25DD4B14001D178E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE3471D425CFFB5A00AE212D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +183,7 @@
 		CE25AB0825D3A87D001D178E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				CE25AB2325DD22DA001D178E /* Auth */,
 				CE25AB0E25D3A8DF001D178E /* Main */,
 				CE25AB0925D3A88A001D178E /* Feed */,
 				CE25AB0A25D3A893001D178E /* Search */,
@@ -227,9 +248,80 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		CE25AB2325DD22DA001D178E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB3725DD29E0001D178E /* Login */,
+				CE25AB3825DD29E7001D178E /* Register */,
+				CE25AB2425DD265A001D178E /* CustomViews */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CE25AB2425DD265A001D178E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB4925DD2BDC001D178E /* UIView */,
+				CE25AB2625DD28EB001D178E /* UITextField */,
+				CE25AB2525DD28E6001D178E /* UIButton */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CE25AB2525DD28E6001D178E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB2725DD2925001D178E /* CustomButtonForAuth.swift */,
+				CE25AB2C25DD2963001D178E /* GeneralConfirmButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		CE25AB2625DD28EB001D178E /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB3125DD2995001D178E /* InputTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		CE25AB3725DD29E0001D178E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB3925DD2B37001D178E /* LoginController.swift */,
+				CE25AB3E25DD2B45001D178E /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE25AB3825DD29E7001D178E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB9325DD49CF001D178E /* RegistrationController.swift */,
+				CE25AB9B25DD4B14001D178E /* RegistrationViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CE25AB4825DD2BB6001D178E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CE25AB4925DD2BDC001D178E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CE25AB4A25DD2BE9001D178E /* InputContainerView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		CE34723325D0DB3200AE212D /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CE25AB4325DD2B86001D178E /* AuthManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -257,6 +349,7 @@
 			children = (
 				CE25AB0325D3A7A2001D178E /* Reusable.swift */,
 				CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */,
+				CE25AB5225DD2C27001D178E /* Global+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +398,7 @@
 			children = (
 				CEAE761425CE9E070038D3DD /* Support */,
 				CEAE761A25CE9E310038D3DD /* Utils */,
+				CE25AB4825DD2BB6001D178E /* Constants */,
 				CEAE761925CE9E2D0038D3DD /* Extensions */,
 				CE34723325D0DB3200AE212D /* Service */,
 				CEAE761825CE9E2B0038D3DD /* Base */,
@@ -577,22 +671,32 @@
 				CE25AB0425D3A7A2001D178E /* Reusable.swift in Sources */,
 				CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */,
 				CE3471EC25D0CFF800AE212D /* ImageSelectController.swift in Sources */,
+				CE25AB9C25DD4B14001D178E /* RegistrationViewModel.swift in Sources */,
 				CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */,
 				CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */,
 				CE3471E225D0CFBB00AE212D /* SearchController.swift in Sources */,
 				CE25AB1425D3A9F0001D178E /* Reactive+Ext.swift in Sources */,
 				CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */,
+				CE25AB2D25DD2963001D178E /* GeneralConfirmButton.swift in Sources */,
+				CE25AB3A25DD2B37001D178E /* LoginController.swift in Sources */,
 				CE34720025D0D05300AE212D /* NotiViewModel.swift in Sources */,
 				CEAE762125CE9FA10038D3DD /* ViewType.swift in Sources */,
 				CE3471E725D0CFCE00AE212D /* SearchViewModel.swift in Sources */,
 				CE34720525D0D06700AE212D /* ProfileViewModel.swift in Sources */,
+				CE25AB9425DD49CF001D178E /* RegistrationController.swift in Sources */,
 				CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */,
+				CE25AB3225DD2995001D178E /* InputTextField.swift in Sources */,
 				CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */,
 				CE3471F125D0D01B00AE212D /* NotiController.swift in Sources */,
 				CE25AB1C25D3BE99001D178E /* UIHelper.swift in Sources */,
+				CE25AB2825DD2925001D178E /* CustomButtonForAuth.swift in Sources */,
+				CE25AB3F25DD2B46001D178E /* LoginViewModel.swift in Sources */,
 				CE25AAFC25D3A70B001D178E /* FeedCell.swift in Sources */,
 				CE3471FB25D0D04100AE212D /* ImageSelectViewModel.swift in Sources */,
 				CE3471F625D0D02C00AE212D /* ProfileController.swift in Sources */,
+				CE25AB4425DD2B86001D178E /* AuthManager.swift in Sources */,
+				CE25AB5325DD2C27001D178E /* Global+Ext.swift in Sources */,
+				CE25AB4B25DD2BE9001D178E /* InputContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

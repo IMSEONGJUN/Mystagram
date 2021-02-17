@@ -36,15 +36,8 @@ final class FeedCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
-        iv.image = #imageLiteral(resourceName: "venom-7")
+        iv.image = #imageLiteral(resourceName: "17")
         return iv
-    }()
-    
-    private let likeButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
-        btn.tintColor = .black
-        return btn
     }()
     
     private let likesLabel: UILabel = {
@@ -53,6 +46,13 @@ final class FeedCell: UICollectionViewCell {
         label.text = "1 like"
         label.textColor = .black
         return label
+    }()
+    
+    private let likeButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+        btn.tintColor = .black
+        return btn
     }()
     
     private let commentButton: UIButton = {
