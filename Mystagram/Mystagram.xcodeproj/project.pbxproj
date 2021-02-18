@@ -23,6 +23,7 @@
 		CE25AB5325DD2C27001D178E /* Global+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB5225DD2C27001D178E /* Global+Ext.swift */; };
 		CE25AB9425DD49CF001D178E /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB9325DD49CF001D178E /* RegistrationController.swift */; };
 		CE25AB9C25DD4B14001D178E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25AB9B25DD4B14001D178E /* RegistrationViewModel.swift */; };
+		CE25ABA425DE1F06001D178E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25ABA325DE1F06001D178E /* UIViewController+Ext.swift */; };
 		CE3471CD25CFFA7D00AE212D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */; };
 		CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D425CFFB5A00AE212D /* FeedController.swift */; };
 		CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */; };
@@ -85,6 +86,7 @@
 		CE25AB5225DD2C27001D178E /* Global+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global+Ext.swift"; sourceTree = "<group>"; };
 		CE25AB9325DD49CF001D178E /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		CE25AB9B25DD4B14001D178E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		CE25ABA325DE1F06001D178E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		CE3471CC25CFFA7D00AE212D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE3471D425CFFB5A00AE212D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		CE3471D925CFFB7D00AE212D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		CE25AB0825D3A87D001D178E /* Scene */ = {
+		CE25AB0825D3A87D001D178E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				CE25AB2325DD22DA001D178E /* Auth */,
@@ -191,7 +193,7 @@
 				CE25AB0C25D3A8B7001D178E /* Notification */,
 				CE25AB0D25D3A8CB001D178E /* Profile */,
 			);
-			path = Scene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		CE25AB0925D3A88A001D178E /* Feed */ = {
@@ -350,6 +352,7 @@
 				CE25AB0325D3A7A2001D178E /* Reusable.swift */,
 				CE25AB1325D3A9F0001D178E /* Reactive+Ext.swift */,
 				CE25AB5225DD2C27001D178E /* Global+Ext.swift */,
+				CE25ABA325DE1F06001D178E /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,7 +405,7 @@
 				CEAE761925CE9E2D0038D3DD /* Extensions */,
 				CE34723325D0DB3200AE212D /* Service */,
 				CEAE761825CE9E2B0038D3DD /* Base */,
-				CE25AB0825D3A87D001D178E /* Scene */,
+				CE25AB0825D3A87D001D178E /* Scenes */,
 				CEAE761C25CE9E7D0038D3DD /* Model */,
 				CECAF7D225CE693400F97928 /* Assets.xcassets */,
 				CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */,
@@ -670,6 +673,7 @@
 			files = (
 				CE25AB0425D3A7A2001D178E /* Reusable.swift in Sources */,
 				CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */,
+				CE25ABA425DE1F06001D178E /* UIViewController+Ext.swift in Sources */,
 				CE3471EC25D0CFF800AE212D /* ImageSelectController.swift in Sources */,
 				CE25AB9C25DD4B14001D178E /* RegistrationViewModel.swift in Sources */,
 				CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */,

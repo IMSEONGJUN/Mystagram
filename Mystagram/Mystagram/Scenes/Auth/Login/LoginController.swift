@@ -27,6 +27,7 @@ final class LoginController: UIViewController, ViewType {
     // MARK: - Properties
     private let logoImageView: UIImageView = {
        let iv = UIImageView()
+        iv.image = #imageLiteral(resourceName: "Instagram_logo_white")
         iv.layer.cornerRadius = 3
         iv.clipsToBounds = true
         return iv
@@ -61,6 +62,7 @@ final class LoginController: UIViewController, ViewType {
     // MARK: - Initial UI Setup
     func setupUI() {
         configureDetailAttributesOfUI()
+        configureGradientLayer()
         configureLogoImageView()
         configureGoToSignUpPageButton()
         configureAuthenticationStackView()
@@ -79,7 +81,8 @@ final class LoginController: UIViewController, ViewType {
         logoImageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(100)
-            $0.width.height.equalTo(120)
+            $0.width.equalTo(150)
+            $0.height.equalTo(60)
         }
     }
     
