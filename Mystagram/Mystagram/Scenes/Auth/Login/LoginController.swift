@@ -28,19 +28,15 @@ final class LoginController: UIViewController, ViewType {
     private let logoImageView: UIImageView = {
        let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "Instagram_logo_white")
+        iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 3
         iv.clipsToBounds = true
         return iv
     }()
     
-    private lazy var emailContainer = InputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: emailTextField)
-    private lazy var passwordContainer = InputContainerView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: passwordTextField)
-    
     private let emailTextField = InputTextField(placeHolder: "Email")
     private let passwordTextField = InputTextField(placeHolder: "Password")
-    
     private let loginButton = CustomButtonForAuth(title: "Log In", color: #colorLiteral(red: 0.9379426837, green: 0.7515827417, blue: 0.31791839, alpha: 1))
-     
     private let goToSignUpPageButton = GeneralConfirmButton(firstText: "Don't have an account? ", secondText: "Sign Up")
     
     var viewModel: LoginViewModelBindable!
@@ -95,11 +91,11 @@ final class LoginController: UIViewController, ViewType {
     }
     
     private func configureAuthenticationStackView() {
-        let stack = UIStackView(arrangedSubviews: [emailContainer, passwordContainer, loginButton])
+        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
         view.addSubview(stack)
         stack.axis = .vertical
         stack.spacing = 10
-        [emailContainer, passwordContainer, loginButton].forEach({
+        [emailTextField, passwordTextField, loginButton].forEach({
             $0.snp.makeConstraints {
                 $0.height.equalTo(50)
             }

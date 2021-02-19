@@ -17,12 +17,24 @@ final class InputTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 8, dy: 0)
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 8, dy: 0)
+    }
+    
     init(placeHolder: String) {
         super.init(frame: .zero)
+        borderStyle = .none
+        backgroundColor = UIColor(white: 1, alpha: 0.7)
+        keyboardAppearance = .dark
         returnKeyType = .done
         autocorrectionType = .no
-        attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.foregroundColor : UIColor.white])
+        attributedPlaceholder = NSAttributedString(string: placeHolder,
+                                                   attributes: [.foregroundColor : UIColor.lightGray])
         textColor = .white
-        font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        font = UIFont.systemFont(ofSize: 16, weight: .medium)
     }
 }
