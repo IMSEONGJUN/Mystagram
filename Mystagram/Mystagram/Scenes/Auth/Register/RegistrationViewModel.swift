@@ -10,17 +10,16 @@ import RxSwift
 import RxCocoa
 import Firebase
 
-typealias RegisterInfo = (email: String, fullName: String, userType: String, password: String)
+typealias RegisterInfo = (email: String, password: String, fullName: String, userName: String)
 
 struct RegistrationViewModel: RegistrationViewModelBindable {
     
     // MARK: - Properties
     let email = PublishRelay<String>()
     let fullName = PublishRelay<String>()
-    let userType = PublishRelay<String>()
+    let userName = PublishRelay<String>()
     let password = PublishRelay<String>()
     let signupButtonTapped = PublishRelay<Void>()
-    let goToLoginPageButtonTapped = PublishRelay<Void>()
     
     let isRegistering: Driver<Bool>
     let isRegistered: Signal<Bool>
@@ -42,7 +41,7 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
             .combineLatest(
                 email,
                 fullName,
-                userType,
+                userName,
                 password
             )
             .share()

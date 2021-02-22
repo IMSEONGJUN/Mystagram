@@ -16,14 +16,18 @@ final class CustomButtonForAuth: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, color: UIColor) {
+    convenience init(firstText: String, secondText: String) {
         self.init(frame: .zero)
-        setTitle(title, for: .normal)
-        backgroundColor = color
-        setTitleColor(.white, for: .normal)
-        layer.cornerRadius = 10
-        clipsToBounds = true
-        isEnabled = false
-        titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        configure(firstText: firstText, secondText: secondText)
+    }
+    
+    private func configure(firstText: String, secondText: String) {
+        let attributedTitle = NSMutableAttributedString(string: firstText,
+                                                        attributes: [.font: UIFont.systemFont(ofSize: 15),
+                                                                     .foregroundColor : UIColor.white])
+        attributedTitle.append(NSAttributedString(string: secondText,
+                                                  attributes: [.font : UIFont.boldSystemFont(ofSize: 15),
+                                                               .foregroundColor : UIColor.white]))
+        setAttributedTitle(attributedTitle, for: .normal)
     }
 }

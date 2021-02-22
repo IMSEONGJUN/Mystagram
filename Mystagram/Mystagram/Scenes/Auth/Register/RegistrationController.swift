@@ -15,10 +15,9 @@ protocol RegistrationViewModelBindable: ViewModelType {
     // Input
     var email: PublishRelay<String> { get }
     var fullName: PublishRelay<String> { get }
-    var userType: PublishRelay<String> { get }
+    var userName: PublishRelay<String> { get }
     var password: PublishRelay<String> { get }
     var signupButtonTapped: PublishRelay<Void> { get }
-    var goToLoginPageButtonTapped: PublishRelay<Void> { get }
     
     // Output
     var isRegistering: Driver<Bool> { get }
@@ -29,17 +28,24 @@ protocol RegistrationViewModelBindable: ViewModelType {
 final class RegistrationController: UIViewController, ViewType {
 
     // MARK: - Properties
+    private let profileImageView: UIImageView = {
+       let iv = UIImageView(image: #imageLiteral(resourceName: "plus_photo"))
+        iv.image?.withTintColor(.white, renderingMode: .alwaysTemplate)
+        return iv
+    }()
     
-    private let emailContainer = InputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: InputTextField(placeHolder: "Email"))
-    private let fullNameContainer = InputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: InputTextField(placeHolder: "Full Name"))
-    private let passwordContainer = InputContainerView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: InputTextField(placeHolder: "Password"))
+    private let emailTextField = InputTextField(placeHolder: "Email")
+    private let passwordTextField = InputTextField(placeHolder: "Password")
+    private let fullNameTextField = InputTextField(placeHolder: "Full Name")
+    private let userNameTextField = InputTextField(placeHolder: "Full Name")
     
-    private let signUpButton = GeneralConfirmButton(title: "Sign Up", color: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
-    private let goToLoginPageButton = GeneralConfirmButton(firstText: "Already have an account? ", secondText: "Log In")
+    private let signUpButton = GeneralConfirmButton(title: "Sign Up", color: #colorLiteral(red: 0.4086206853, green: 0.3878411353, blue: 0.9632868171, alpha: 1))
+    private let goToLoginPageButton = CustomButtonForAuth(firstText: "Already have an account? ", secondText: "Log In")
     
-    private lazy var stackContents = [ emailContainer,
-                                       fullNameContainer,
-                                       passwordContainer,
+    private lazy var stackContents = [ emailTextField,
+                                       fullNameTextField,
+                                       passwordTextField,
+                                       userNameTextField,
                                        signUpButton ]
     
     private let stack = UIStackView()
@@ -55,15 +61,26 @@ final class RegistrationController: UIViewController, ViewType {
     
     // MARK: - Initial UI Setup
     func setupUI() {
+        configureGradientLayer()
         configureUIAttributeThings()
+        configureProfileImageView()
         configureInputContextStackView()
         configureGoToLoginPageButton()
         setTapGesture()
     }
     
     private func configureUIAttributeThings() {
-        emailContainer.inputText.keyboardType = .emailAddress
-        passwordContainer.inputText.isSecureTextEntry = true
+        emailTextField.keyboardType = .emailAddress
+        passwordTextField.isSecureTextEntry = true
+    }
+    
+    private func configureProfileImageView() {
+        view.addSubview(profileImageView)
+        profileImageView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(50)
+            $0.width.height.equalTo(view.snp.width).multipliedBy(0.3)
+        }
     }
     
     private func configureInputContextStackView() {
@@ -71,11 +88,11 @@ final class RegistrationController: UIViewController, ViewType {
         stackContents.forEach({ stack.addArrangedSubview($0) })
         stack.axis = .vertical
         stack.spacing = 20
-        stack.setCustomSpacing(10, after: passwordContainer)
         
-        [ emailContainer,
-          fullNameContainer,
-          passwordContainer,
+        [ emailTextField,
+          passwordTextField,
+          fullNameTextField,
+          userNameTextField,
           signUpButton ]
         .forEach {
             $0.snp.makeConstraints {
@@ -85,7 +102,7 @@ final class RegistrationController: UIViewController, ViewType {
         
         view.addSubview(stack)
         stack.snp.makeConstraints {
-//            $0.top.equalTo(titleLabel.snp.bottom).offset(20)
+            $0.top.equalTo(profileImageView.snp.bottom).offset(50)
             $0.leading.trailing.equalToSuperview().inset(30)
         }
     }
@@ -113,34 +130,36 @@ final class RegistrationController: UIViewController, ViewType {
             .bind(to: viewModel.signupButtonTapped)
             .disposed(by: disposeBag)
         
-        emailContainer.inputText.rx.text
+        emailTextField.rx.text
             .orEmpty
             .distinctUntilChanged()
             .bind(to: viewModel.email)
             .disposed(by: disposeBag)
         
-        fullNameContainer.inputText.rx.text
-            .orEmpty
-            .distinctUntilChanged()
-            .bind(to: viewModel.fullName)
-            .disposed(by: disposeBag)
-        
-        passwordContainer.inputText.rx.text
+        passwordTextField.rx.text
             .orEmpty
             .distinctUntilChanged()
             .bind(to: viewModel.password)
             .disposed(by: disposeBag)
         
-//        segment.segmentControl.rx.selectedTitle
-//            .bind(to: viewModel.userType)
-//            .disposed(by: disposeBag)
+        fullNameTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .bind(to: viewModel.fullName)
+            .disposed(by: disposeBag)
+        
+        userNameTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .bind(to: viewModel.userName)
+            .disposed(by: disposeBag)
         
         
         // viewModel -> Output
         viewModel.isFormValid
             .drive(onNext: { [weak self] in
                 self?.signUpButton.isEnabled = $0
-                self?.signUpButton.backgroundColor = $0 ? #colorLiteral(red: 0.2256013453, green: 0.6298174262, blue: 0.9165520668, alpha: 1) : #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+                self?.signUpButton.backgroundColor = $0 ? #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1) : #colorLiteral(red: 0.4086206853, green: 0.3878411353, blue: 0.9632868171, alpha: 1)
             })
             .disposed(by: disposeBag)
         
@@ -152,7 +171,9 @@ final class RegistrationController: UIViewController, ViewType {
         
         // UI Binding
         goToLoginPageButton.rx.tap
-            .bind(to: viewModel.goToLoginPageButtonTapped)
+            .subscribe(onNext: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            })
             .disposed(by: disposeBag)
         
         

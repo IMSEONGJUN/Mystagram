@@ -71,7 +71,7 @@ final class AuthManager {
         let docData:[String: Any] = [
             "email": values.email,
             "fullname": values.fullName,
-            "userType": values.userType,
+            "userName": values.userName,
             "uid": uid,
         ]
         

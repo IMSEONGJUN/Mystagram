@@ -28,13 +28,20 @@ final class InputTextField: UITextField {
     init(placeHolder: String) {
         super.init(frame: .zero)
         borderStyle = .none
-        backgroundColor = UIColor(white: 1, alpha: 0.7)
+        backgroundColor = UIColor(white: 1, alpha: 0.1)
         keyboardAppearance = .dark
         returnKeyType = .done
         autocorrectionType = .no
         attributedPlaceholder = NSAttributedString(string: placeHolder,
-                                                   attributes: [.foregroundColor : UIColor.lightGray])
+                                                   attributes: [.foregroundColor : UIColor(white: 1, alpha: 0.7)])
         textColor = .white
         font = UIFont.systemFont(ofSize: 16, weight: .medium)
+    }
+}
+
+
+class MyLabel: UILabel {
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.insetBy(dx: 16, dy: 0))
     }
 }

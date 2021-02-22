@@ -28,7 +28,7 @@ final class LoginController: UIViewController, ViewType {
     private let logoImageView: UIImageView = {
        let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "Instagram_logo_white")
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleAspectFit
         iv.layer.cornerRadius = 3
         iv.clipsToBounds = true
         return iv
@@ -36,8 +36,9 @@ final class LoginController: UIViewController, ViewType {
     
     private let emailTextField = InputTextField(placeHolder: "Email")
     private let passwordTextField = InputTextField(placeHolder: "Password")
-    private let loginButton = CustomButtonForAuth(title: "Log In", color: #colorLiteral(red: 0.9379426837, green: 0.7515827417, blue: 0.31791839, alpha: 1))
-    private let goToSignUpPageButton = GeneralConfirmButton(firstText: "Don't have an account? ", secondText: "Sign Up")
+    private let loginButton = GeneralConfirmButton(title: "Log In", color: #colorLiteral(red: 0.3600306213, green: 0.06648322195, blue: 0.9690416455, alpha: 1))
+    private let goToSignUpPageButton = CustomButtonForAuth(firstText: "Don't have an account? ", secondText: "Sign Up")
+    private let forgotPasswordButton = CustomButtonForAuth(firstText: "Forgot your password? ", secondText: "Get help signing in")
     
     var viewModel: LoginViewModelBindable!
     var disposeBag: DisposeBag!
@@ -77,8 +78,8 @@ final class LoginController: UIViewController, ViewType {
         logoImageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(100)
-            $0.width.equalTo(150)
-            $0.height.equalTo(60)
+            $0.width.equalToSuperview().multipliedBy(0.5)
+            $0.height.equalTo(80)
         }
     }
     
@@ -91,11 +92,12 @@ final class LoginController: UIViewController, ViewType {
     }
     
     private func configureAuthenticationStackView() {
-        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
+        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgotPasswordButton])
         view.addSubview(stack)
         stack.axis = .vertical
-        stack.spacing = 10
-        [emailTextField, passwordTextField, loginButton].forEach({
+        stack.spacing = 20
+        stack.setCustomSpacing(10, after: loginButton)
+        [emailTextField, passwordTextField, loginButton, forgotPasswordButton].forEach({
             $0.snp.makeConstraints {
                 $0.height.equalTo(50)
             }
@@ -132,7 +134,7 @@ final class LoginController: UIViewController, ViewType {
         viewModel.isValidForm
             .drive(onNext: { [weak self] in
                 self?.loginButton.isEnabled = $0
-                self?.loginButton.backgroundColor = $0 ? #colorLiteral(red: 0.9659136591, green: 0.6820907831, blue: 0.1123226724, alpha: 1) : #colorLiteral(red: 0.9379426837, green: 0.7515827417, blue: 0.31791839, alpha: 1)
+                self?.loginButton.backgroundColor = $0 ? #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1) : #colorLiteral(red: 0.3600306213, green: 0.06648322195, blue: 0.9690416455, alpha: 1)
             })
             .disposed(by: disposeBag)
         
