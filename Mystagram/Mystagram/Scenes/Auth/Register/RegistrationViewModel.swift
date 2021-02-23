@@ -40,17 +40,18 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
         let registrationValues = Observable
             .combineLatest(
                 email,
+                password,
                 fullName,
-                userName,
-                password
+                userName
             )
             .share()
         
         isFormValid = registrationValues
             .map {
                 isValidEmailAddress(email: $0)
-                && $1.count > 2
-                && $3.count > 6
+                && $1.count > 6
+                && $2.count > 3
+                && $3.count > 3
             }
             .asDriver(onErrorJustReturn: false)
         

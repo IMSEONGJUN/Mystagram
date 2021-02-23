@@ -28,10 +28,11 @@ protocol RegistrationViewModelBindable: ViewModelType {
 final class RegistrationController: UIViewController, ViewType {
 
     // MARK: - Properties
-    private let profileImageView: UIImageView = {
-       let iv = UIImageView(image: #imageLiteral(resourceName: "plus_photo"))
-        iv.image?.withTintColor(.white, renderingMode: .alwaysTemplate)
-        return iv
+    private let plusPhotoButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
+        btn.tintColor = .white
+        return btn
     }()
     
     private let emailTextField = InputTextField(placeHolder: "Email")
@@ -63,7 +64,7 @@ final class RegistrationController: UIViewController, ViewType {
     func setupUI() {
         configureGradientLayer()
         configureUIAttributeThings()
-        configureProfileImageView()
+        configurePlusPhotoButton()
         configureInputContextStackView()
         configureGoToLoginPageButton()
         setTapGesture()
@@ -74,17 +75,16 @@ final class RegistrationController: UIViewController, ViewType {
         passwordTextField.isSecureTextEntry = true
     }
     
-    private func configureProfileImageView() {
-        view.addSubview(profileImageView)
-        profileImageView.snp.makeConstraints {
+    private func configurePlusPhotoButton() {
+        view.addSubview(plusPhotoButton)
+        plusPhotoButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(50)
-            $0.width.height.equalTo(view.snp.width).multipliedBy(0.3)
+            $0.width.height.equalTo(view.snp.width).multipliedBy(0.35)
         }
     }
     
     private func configureInputContextStackView() {
-        
         stackContents.forEach({ stack.addArrangedSubview($0) })
         stack.axis = .vertical
         stack.spacing = 20
@@ -102,7 +102,7 @@ final class RegistrationController: UIViewController, ViewType {
         
         view.addSubview(stack)
         stack.snp.makeConstraints {
-            $0.top.equalTo(profileImageView.snp.bottom).offset(50)
+            $0.top.equalTo(plusPhotoButton.snp.bottom).offset(50)
             $0.leading.trailing.equalToSuperview().inset(30)
         }
     }

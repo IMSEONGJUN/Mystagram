@@ -27,7 +27,7 @@ struct LoginViewModel: LoginViewModelBindable {
             )
             .map {
                 isValidEmailAddress(email: $0)
-                    && $1.count > 6
+                && $1.count > 6
             }
             .asDriver(onErrorJustReturn: false)
         
