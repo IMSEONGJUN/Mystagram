@@ -10,11 +10,12 @@ import RxSwift
 import RxCocoa
 import Firebase
 
-typealias RegisterInfo = (email: String, password: String, fullName: String, userName: String)
+typealias RegisterInfo = (profileImage: UIImage?, email: String, password: String, fullName: String, userName: String)
 
 struct RegistrationViewModel: RegistrationViewModelBindable {
     
     // MARK: - Properties
+    let profileImage = PublishRelay<UIImage?>()
     let email = PublishRelay<String>()
     let fullName = PublishRelay<String>()
     let userName = PublishRelay<String>()
@@ -39,6 +40,7 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
         // Validate Registration Values
         let registrationValues = Observable
             .combineLatest(
+                profileImage,
                 email,
                 password,
                 fullName,
@@ -48,10 +50,11 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
         
         isFormValid = registrationValues
             .map {
-                isValidEmailAddress(email: $0)
-                && $1.count > 6
-                && $2.count > 3
+                $0 != nil
+                && isValidEmailAddress(email: $1)
+                && $2.count > 6
                 && $3.count > 3
+                && $4.count > 3
             }
             .asDriver(onErrorJustReturn: false)
         
@@ -62,10 +65,16 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
                 onRegistering.accept(true)
             })
             .flatMapLatest( model.performRegistration )
-            .subscribe(onNext: {
+            .subscribe { completable in
+                switch completable {
+                case .completed:
+                    onRegistered.accept(true)
+                case .error(let err):
+                    print("Failed to register: \(err)")
+                    onRegistered.accept(false)
+                }
                 onRegistering.accept(false)
-                onRegistered.accept($0)
-            })
+            }
             .disposed(by: disposeBag)
     }
 }

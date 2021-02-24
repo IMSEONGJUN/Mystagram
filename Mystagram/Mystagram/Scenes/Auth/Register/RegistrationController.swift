@@ -10,9 +10,11 @@ import RxSwift
 import RxCocoa
 import JGProgressHUD
 import SnapKit
+import RxOptional
 
 protocol RegistrationViewModelBindable: ViewModelType {
     // Input
+    var profileImage: PublishRelay<UIImage?> { get }
     var email: PublishRelay<String> { get }
     var fullName: PublishRelay<String> { get }
     var userName: PublishRelay<String> { get }
@@ -25,10 +27,10 @@ protocol RegistrationViewModelBindable: ViewModelType {
     var isFormValid: Driver<Bool> { get }
 }
 
-final class RegistrationController: UIViewController, ViewType {
+final class RegistrationController: UIViewController, UINavigationControllerDelegate, ViewType {
 
     // MARK: - Properties
-    private let plusPhotoButton: UIButton = {
+    let plusPhotoButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
         btn.tintColor = .white
@@ -50,6 +52,7 @@ final class RegistrationController: UIViewController, ViewType {
                                        signUpButton ]
     
     private let stack = UIStackView()
+    private let picker = UIImagePickerController()
     
     var viewModel: RegistrationViewModelBindable!
     var disposeBag: DisposeBag!
@@ -176,6 +179,13 @@ final class RegistrationController: UIViewController, ViewType {
             })
             .disposed(by: disposeBag)
         
+        picker.rx.didFinishSelectImage
+            .bind(to: viewModel.profileImage)
+            .disposed(by: disposeBag)
+        
+        picker.rx.didFinishSelectImage
+            .bind(to: self.rx.setProfileImageButton)
+            .disposed(by: disposeBag)
         
         // Notification binding
         NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)

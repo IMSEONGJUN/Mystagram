@@ -13,7 +13,7 @@ target 'Mystagram' do
   pod 'JGProgressHUD'
   pod 'RxOptional'
   pod 'Toaster'
-  
+  pod 'YPImagePicker'
   
   # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'

@@ -354,6 +354,7 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - PryntTrimmerView (4.0.2)
   - RxCocoa (6.0.0):
     - RxRelay (= 6.0.0)
     - RxSwift (= 6.0.0)
@@ -367,7 +368,11 @@ PODS:
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
   - SnapKit (5.0.1)
+  - SteviaLayout (4.7.3)
   - Toaster (2.3.0)
+  - YPImagePicker (4.4.0):
+    - PryntTrimmerView (~> 4.0.2)
+    - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
   - Firebase
@@ -384,6 +389,7 @@ DEPENDENCIES:
   - SDWebImage
   - SnapKit
   - Toaster
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
@@ -409,13 +415,16 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - PryntTrimmerView
     - RxCocoa
     - RxOptional
     - RxRelay
     - RxSwift
     - SDWebImage
     - SnapKit
+    - SteviaLayout
     - Toaster
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -440,14 +449,17 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxOptional: cb0b05f0270854eb8ac322c4eb298c4945469fab
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: 2d49338e5bd583ae8a476bedfbca9e74a950a056
+PODFILE CHECKSUM: 6ab2a3239cf0e134ca36755a09086a4ca4fa6dbe
 
 COCOAPODS: 1.8.4
