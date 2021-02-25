@@ -59,4 +59,31 @@ extension UIViewController {
         }
 
     }
+    
+    func didTapPlusPhotoButton<T: UIImagePickerControllerDelegate>(viewController: T)
+                                                                            where T : UINavigationControllerDelegate {
+        self.view.endEditing(true)
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = viewController
+        let alert = UIAlertController(title: "Select ImageSource", message: "", preferredStyle: .actionSheet)
+        
+        let takePhoto = UIAlertAction(title: "Take photo", style: .default) { (_) in
+            guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
+            imagePicker.sourceType = .camera
+            imagePicker.videoQuality = .typeHigh
+            self.present(imagePicker, animated: true)
+        }
+        
+        let album = UIAlertAction(title: "Photo Album", style: .default) { (_) in
+            imagePicker.sourceType = .savedPhotosAlbum
+            self.present(imagePicker, animated: true)
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(takePhoto)
+        alert.addAction(album)
+        alert.addAction(cancel)
+        self.present(alert, animated: true)
+    }
 }

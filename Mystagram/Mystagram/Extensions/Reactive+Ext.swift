@@ -22,6 +22,7 @@ extension Reactive where Base: UIImagePickerController {
         let selector = #selector(UIImagePickerControllerDelegate.imagePickerController(_:didFinishPickingMediaWithInfo:))
         let source = self.delegate.methodInvoked(selector)
             .map { arg -> UIImage? in
+                print("Reactive custom Imagepicker")
                 let picker = try castOrThrow(UIImagePickerController.self, arg[0])
                 let info = try castOrThrow([UIImagePickerController.InfoKey : Any].self, arg[1])
                 

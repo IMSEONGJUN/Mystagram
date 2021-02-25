@@ -18,13 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         var rootViewController: UINavigationController
         
-        if loginCheck() {
-            let mainVC = MainTabBarController()
-            rootViewController = UINavigationController(rootViewController: mainVC)
-        } else {
+//        if loginCheck() {
+//            let mainVC = MainTabBarController()
+//            rootViewController = UINavigationController(rootViewController: mainVC)
+//        } else {
             let loginController = LoginController.create(with: LoginViewModel())
             rootViewController = UINavigationController(rootViewController: loginController)
-        }
+//        }
         
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()

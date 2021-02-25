@@ -65,17 +65,25 @@ struct RegistrationViewModel: RegistrationViewModelBindable {
                 onRegistering.accept(true)
             })
             .flatMapLatest( model.performRegistration )
-            .subscribe { completable in
-                switch completable {
-                case .completed:
-                    onRegistered.accept(true)
-                case .error(let err):
-                    print("Failed to register: \(err)")
-                    onRegistered.accept(false)
-                }
+            .subscribe(onNext: {
                 onRegistering.accept(false)
-            }
+                onRegistered.accept($0)
+            })
             .disposed(by: disposeBag)
     }
 }
 
+
+
+//.subscribe { completable in
+//    print("registration response!!!!!!!!!!")
+//    onRegistering.accept(false)
+//    switch completable {
+//    case .completed:
+//        print("registration completed response!!!!!!!!!!")
+//        onRegistered.accept(true)
+//    case .error(let err):
+//        print("Failed to register: \(err)")
+//        onRegistered.accept(false)
+//    }
+//}

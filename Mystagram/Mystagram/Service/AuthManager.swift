@@ -46,21 +46,22 @@ final class AuthManager {
     }
     
     // MARK: - Registration Logic
-    func performRegistration(values: RegisterInfo) -> Completable {
-        return Completable.create { completable -> Disposable in
+    func performRegistration(values: RegisterInfo) -> Observable<Bool> {
+        return Observable.create { observer -> Disposable in
             Auth.auth().createUser(withEmail: values.email, password: values.password) { (result, error) in
                 if let error = error {
                     print("failed to create User: ", error)
-                    completable(.error(error))
+                    observer.onNext(false)
                     return
                 }
                 self.saveImageToFirebase(values: values)
                     .subscribe { com in
                         switch com {
                         case .completed:
-                            completable(.completed)
+                            observer.onNext(true)
                         case .error(let err):
-                            completable(.error(err))
+                            print("Failed to register: \(err)")
+                            observer.onNext(false)
                         }
                     }
                     .disposed(by: self.disposeBag)
@@ -72,7 +73,7 @@ final class AuthManager {
     
     private func saveImageToFirebase(values: RegisterInfo) -> Completable {
         let filename = UUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/images/\(filename)")
+        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
         let imageData = values.profileImage?.jpegData(compressionQuality: 0.75) ?? Data()
         
         return Completable.create { completable -> Disposable in

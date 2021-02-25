@@ -27,20 +27,22 @@ protocol RegistrationViewModelBindable: ViewModelType {
     var isFormValid: Driver<Bool> { get }
 }
 
-final class RegistrationController: UIViewController, UINavigationControllerDelegate, ViewType {
+final class RegistrationController: UIViewController, ViewType {
 
     // MARK: - Properties
     let plusPhotoButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
         btn.tintColor = .white
+        btn.contentMode = .scaleAspectFill
+        btn.clipsToBounds = true
         return btn
     }()
     
     private let emailTextField = InputTextField(placeHolder: "Email")
     private let passwordTextField = InputTextField(placeHolder: "Password")
     private let fullNameTextField = InputTextField(placeHolder: "Full Name")
-    private let userNameTextField = InputTextField(placeHolder: "Full Name")
+    private let userNameTextField = InputTextField(placeHolder: "user Name")
     
     private let signUpButton = GeneralConfirmButton(title: "Sign Up", color: #colorLiteral(red: 0.4086206853, green: 0.3878411353, blue: 0.9632868171, alpha: 1))
     private let goToLoginPageButton = CustomButtonForAuth(firstText: "Already have an account? ", secondText: "Log In")
@@ -128,8 +130,6 @@ final class RegistrationController: UIViewController, UINavigationControllerDele
         
         // Input -> ViewModel
         signUpButton.rx.tap
-            .map{ _ in Void() }
-            .debug()
             .bind(to: viewModel.signupButtonTapped)
             .disposed(by: disposeBag)
         
@@ -166,9 +166,20 @@ final class RegistrationController: UIViewController, UINavigationControllerDele
             })
             .disposed(by: disposeBag)
         
+        viewModel.profileImage
+            .bind(to: self.rx.setProfileImageButton)
+            .disposed(by: disposeBag)
+        
         viewModel.isRegistering
             .drive(onNext: {[weak self] in
                 self?.showActivityIndicator($0, withText: $0 ? "Registering" : nil)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.isRegistered
+            .filter{ $0 }
+            .emit(onNext: { [weak self] _ in
+                self?.switchToHomeVC()
             })
             .disposed(by: disposeBag)
         
@@ -179,13 +190,12 @@ final class RegistrationController: UIViewController, UINavigationControllerDele
             })
             .disposed(by: disposeBag)
         
-        picker.rx.didFinishSelectImage
-            .bind(to: viewModel.profileImage)
+        plusPhotoButton.rx.tap
+            .subscribe(onNext: { [unowned self] in
+                self.didTapPlusPhotoButton(viewController: self)
+            })
             .disposed(by: disposeBag)
         
-        picker.rx.didFinishSelectImage
-            .bind(to: self.rx.setProfileImageButton)
-            .disposed(by: disposeBag)
         
         // Notification binding
         NotificationCenter.default.rx.notification(UIResponder.keyboardWillShowNotification)
@@ -229,3 +239,12 @@ final class RegistrationController: UIViewController, UINavigationControllerDele
     }
 }
 
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("finished image pick")
+        let image = info[.originalImage] as? UIImage
+        viewModel.profileImage.accept(image)
+        picker.dismiss(animated: true)
+    }
+}
