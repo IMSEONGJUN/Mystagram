@@ -242,7 +242,6 @@ final class RegistrationController: UIViewController, ViewType {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print("finished image pick")
         let image = info[.originalImage] as? UIImage
         viewModel.profileImage.accept(image)
         picker.dismiss(animated: true)

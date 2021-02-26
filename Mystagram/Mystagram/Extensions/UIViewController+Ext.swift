@@ -86,4 +86,12 @@ extension UIViewController {
         alert.addAction(cancel)
         self.present(alert, animated: true)
     }
+    
+    func setupNavigationBar(vc: UIViewController) {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.shadowColor = nil
+        appearance.backgroundColor = .systemBackground
+        vc.navigationController?.navigationBar.standardAppearance = appearance
+    }
 }

@@ -32,6 +32,11 @@ class MainTabBarController: UITabBarController {
         
         viewControllers = [feedVC, searchVC, imageSelectVC, notiVC, profileVC]
         tabBar.tintColor = .black
+        
+        let appearance = UITabBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = .systemBackground
+        tabBar.standardAppearance = appearance
     }
     
     func wrapInNavigationVC(unselectedImage: UIImage,

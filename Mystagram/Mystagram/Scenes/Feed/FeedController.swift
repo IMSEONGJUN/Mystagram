@@ -28,12 +28,12 @@ final class FeedController: UIViewController, ViewType {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .yellow
-        appearance.configureWithDefaultBackground()
-        self.navigationController?.navigationBar.standardAppearance = appearance
-        
-//        title = "Feed"
+        title = "Feed"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar(vc: self)
     }
     
     func setupUI() {
