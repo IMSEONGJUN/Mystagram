@@ -179,7 +179,7 @@ final class RegistrationController: UIViewController, ViewType {
         viewModel.isRegistered
             .filter{ $0 }
             .emit(onNext: { [weak self] _ in
-                self?.switchToHomeVC()
+                self?.switchToSomeVC(mainVC: MainTabBarController())
             })
             .disposed(by: disposeBag)
         

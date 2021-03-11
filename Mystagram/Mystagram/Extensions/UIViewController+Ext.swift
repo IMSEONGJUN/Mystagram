@@ -33,14 +33,12 @@ extension UIViewController {
         }
     }
     
-    func switchToHomeVC() {
+    func switchToSomeVC<T: UIViewController>(mainVC: T) {
         if #available(iOS 13.0, *) {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)
                 window.backgroundColor = .systemBackground
-                let mainVC = MainTabBarController()
-                let rootVC = UINavigationController(rootViewController: mainVC)
-                window.rootViewController = rootVC
+                window.rootViewController = mainVC
 
                 let sceneDelegate = windowScene.delegate as? SceneDelegate
                 window.makeKeyAndVisible()
@@ -50,18 +48,15 @@ extension UIViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let window = UIWindow(frame: UIScreen.main.bounds)
             window.backgroundColor = .systemBackground
-            let mainVC = MainTabBarController()
-            let rootVC = UINavigationController(rootViewController: mainVC)
-            window.rootViewController = rootVC
-            
+            window.rootViewController = mainVC
             window.makeKeyAndVisible()
             appDelegate.window = window
         }
 
     }
     
-    func didTapPlusPhotoButton<T: UIImagePickerControllerDelegate>(viewController: T)
-                                                                            where T : UINavigationControllerDelegate {
+    func didTapPlusPhotoButton<T: UIImagePickerControllerDelegate & UINavigationControllerDelegate>(viewController: T)
+                                                                             {
         self.view.endEditing(true)
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = viewController

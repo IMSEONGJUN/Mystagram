@@ -28,12 +28,26 @@ final class FeedController: UIViewController, ViewType {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
         title = "Feed"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBar(vc: self)
+    }
+    
+    @objc func didTapLogout() {
+        AuthManager.shared.doLogout()
+            .subscribe { completable in
+                switch completable {
+                case .completed:
+                    self.switchToSomeVC(mainVC: LoginController.create(with: LoginViewModel()))
+                case .error(_):
+                    print("failed to logout")
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     func setupUI() {
