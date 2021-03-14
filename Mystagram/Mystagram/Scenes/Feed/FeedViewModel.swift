@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct FeedViewModel: FeedViewModelBindable {
-    
+    let didTapProfileButton = PublishRelay<Void>()
 }

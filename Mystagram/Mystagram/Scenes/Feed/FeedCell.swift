@@ -178,7 +178,7 @@ final class FeedCell: UICollectionViewCell {
         }
     }
     
-    func bind(profileButtonTapped: PublishSubject<Void>) {
+    func bind(profileButtonTapped: PublishRelay<Void>) {
         
     }
 }

@@ -12,7 +12,7 @@ import SnapKit
 
 protocol FeedViewModelBindable: ViewModelType {
     // Input
-    
+    var didTapProfileButton: PublishRelay<Void> { get }
     // Output
     
 }
@@ -68,7 +68,15 @@ final class FeedController: UIViewController, ViewType {
     func bind() {
         // cell 바인딩 할때 cell 내부에 bind함수를 별도로 만들고 파라미터로 cellData랑 Subject<Void>타입으로 buttonClicked같은 이름으로 받도록 하고 viewModel이 갖고있는 buttonClicked subject를 인자로 넘겨서 cell내부 버튼을 해당 subject에 바인딩해준다.
         // 예전에 내가 쓰던 proxy느낌
-        
+//        let buttonClicked = PublishSubject<Void>()
+//        let input = MainViewModel.Input(buttonClicked: buttonClicked)
+//        let output = viewModel.connect(input)
+//        output.dataDriver.drive(tableView.rx.items) { tableView, index, element in
+//            var cell: TableViewCell!
+//            cell.bindViewModel(viewModel: element, buttonClicked: buttonClicked.asObserver())
+//            return cell
+//        }
+//        .disposed(by: disposeBag)
         
     }
 
@@ -81,6 +89,7 @@ extension FeedController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCell.reuseID, for: indexPath) as! FeedCell
+        cell.bind(profileButtonTapped: viewModel.didTapProfileButton)
         return cell
     }
 }
