@@ -44,6 +44,9 @@
 		CECAF7D625CE693400F97928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECAF7D425CE693400F97928 /* LaunchScreen.storyboard */; };
 		CECAF7E125CE693400F97928 /* MystagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7E025CE693400F97928 /* MystagramTests.swift */; };
 		CECAF7EC25CE693400F97928 /* MystagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECAF7EB25CE693400F97928 /* MystagramUITests.swift */; };
+		CEDAA5ED26023A8900DFA6FA /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA5EC26023A8900DFA6FA /* Feed.swift */; };
+		CEDAA5F226023AB000DFA6FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA5F126023AB000DFA6FA /* User.swift */; };
+		CEDAA5F726023CA500DFA6FA /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA5F626023CA500DFA6FA /* Reply.swift */; };
 		ED37EACDA3CD2ADBF758CD34 /* Pods_Mystagram_MystagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B156B7C2C49CB3A6D2FF07E /* Pods_Mystagram_MystagramUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +116,9 @@
 		CECAF7E725CE693400F97928 /* MystagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MystagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECAF7EB25CE693400F97928 /* MystagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MystagramUITests.swift; sourceTree = "<group>"; };
 		CECAF7ED25CE693400F97928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDAA5EC26023A8900DFA6FA /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		CEDAA5F126023AB000DFA6FA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CEDAA5F626023CA500DFA6FA /* Reply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reply.swift; sourceTree = "<group>"; };
 		D8FAA27C7EE7E2BD9A608D1C /* Pods-Mystagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram.release.xcconfig"; path = "Target Support Files/Pods-Mystagram/Pods-Mystagram.release.xcconfig"; sourceTree = "<group>"; };
 		EADE61BF01936D1E9B679877 /* Pods-Mystagram-MystagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mystagram-MystagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Mystagram-MystagramUITests/Pods-Mystagram-MystagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +177,9 @@
 		CE25AAF825D3A4A6001D178E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAA5EC26023A8900DFA6FA /* Feed.swift */,
+				CEDAA5F126023AB000DFA6FA /* User.swift */,
+				CEDAA5F626023CA500DFA6FA /* Reply.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -675,6 +684,7 @@
 				CE3471DA25CFFB7D00AE212D /* FeedViewModel.swift in Sources */,
 				CE25ABA425DE1F06001D178E /* UIViewController+Ext.swift in Sources */,
 				CE3471EC25D0CFF800AE212D /* ImageSelectController.swift in Sources */,
+				CEDAA5F226023AB000DFA6FA /* User.swift in Sources */,
 				CE25AB9C25DD4B14001D178E /* RegistrationViewModel.swift in Sources */,
 				CECAF7CA25CE693300F97928 /* AppDelegate.swift in Sources */,
 				CE3471D525CFFB5A00AE212D /* FeedController.swift in Sources */,
@@ -687,9 +697,11 @@
 				CEAE762125CE9FA10038D3DD /* ViewType.swift in Sources */,
 				CE3471E725D0CFCE00AE212D /* SearchViewModel.swift in Sources */,
 				CE34720525D0D06700AE212D /* ProfileViewModel.swift in Sources */,
+				CEDAA5ED26023A8900DFA6FA /* Feed.swift in Sources */,
 				CE25AB9425DD49CF001D178E /* RegistrationController.swift in Sources */,
 				CEAE762625CEA1120038D3DD /* ViewModelType.swift in Sources */,
 				CE25AB3225DD2995001D178E /* InputTextField.swift in Sources */,
+				CEDAA5F726023CA500DFA6FA /* Reply.swift in Sources */,
 				CECAF7CC25CE693300F97928 /* SceneDelegate.swift in Sources */,
 				CE3471F125D0D01B00AE212D /* NotiController.swift in Sources */,
 				CE25AB1C25D3BE99001D178E /* UIHelper.swift in Sources */,

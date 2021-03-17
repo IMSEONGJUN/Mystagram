@@ -13,6 +13,7 @@ import SnapKit
 protocol FeedViewModelBindable: ViewModelType {
     // Input
     var didTapProfileButton: PublishRelay<Void> { get }
+    
     // Output
     
 }
@@ -28,7 +29,9 @@ final class FeedController: UIViewController, ViewType {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout",
+                                                                 style: .plain,
+                                                                 target: self, action: #selector(didTapLogout))
         title = "Feed"
     }
     
