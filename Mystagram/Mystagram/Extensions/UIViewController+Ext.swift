@@ -33,12 +33,12 @@ extension UIViewController {
         }
     }
     
-    func switchToSomeVC<T: UIViewController>(mainVC: T) {
+    func switchToSomeVC<T: UIViewController>(to viewController: T) {
         if #available(iOS 13.0, *) {
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)
                 window.backgroundColor = .systemBackground
-                window.rootViewController = mainVC
+                window.rootViewController = viewController
 
                 let sceneDelegate = windowScene.delegate as? SceneDelegate
                 window.makeKeyAndVisible()
@@ -48,7 +48,7 @@ extension UIViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let window = UIWindow(frame: UIScreen.main.bounds)
             window.backgroundColor = .systemBackground
-            window.rootViewController = mainVC
+            window.rootViewController = viewController
             window.makeKeyAndVisible()
             appDelegate.window = window
         }

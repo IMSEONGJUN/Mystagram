@@ -10,5 +10,13 @@ import RxSwift
 import RxCocoa
 
 struct FeedViewModel: FeedViewModelBindable {
-    let didTapProfileButton = PublishRelay<Void>()
+    let didTapProfileButton = PublishRelay<IndexPath?>()
+//    let feeds: Driver<[Feed]>
+    let feeds = [Feed]()
+    
+    init() {
+//
+//        didTapProfileButton
+//            .map { feeds[$0?.item ?? 0].user }
+    }
 }

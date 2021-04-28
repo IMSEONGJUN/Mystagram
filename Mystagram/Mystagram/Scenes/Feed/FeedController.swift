@@ -12,10 +12,11 @@ import SnapKit
 
 protocol FeedViewModelBindable: ViewModelType {
     // Input
-    var didTapProfileButton: PublishRelay<Void> { get }
+    var didTapProfileButton: PublishRelay<IndexPath?> { get }
     
     // Output
-    
+//    var feeds: Driver<[Feed]> { get }
+    var feeds: [Feed] { get }
 }
 
 final class FeedController: UIViewController, ViewType {
@@ -45,7 +46,7 @@ final class FeedController: UIViewController, ViewType {
             .subscribe { completable in
                 switch completable {
                 case .completed:
-                    self.switchToSomeVC(mainVC: LoginController.create(with: LoginViewModel()))
+                    self.switchToSomeVC(to: LoginController.create(with: LoginViewModel()))
                 case .error(_):
                     print("failed to logout")
                 }
@@ -92,7 +93,7 @@ extension FeedController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCell.reuseID, for: indexPath) as! FeedCell
-        cell.bind(profileButtonTapped: viewModel.didTapProfileButton)
+        cell.bind(collectionView: collectionView, profileButtonTapped: viewModel.didTapProfileButton, cellDataModel: viewModel.feeds[indexPath.item])
         return cell
     }
 }

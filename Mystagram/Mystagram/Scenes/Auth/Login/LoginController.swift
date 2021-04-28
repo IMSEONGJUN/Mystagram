@@ -141,7 +141,7 @@ final class LoginController: UIViewController, ViewType {
         viewModel.isLoginCompleted
             .emit(onNext: { [weak self] _ in
                 self?.showActivityIndicator(false)
-                self?.switchToSomeVC(mainVC: MainTabBarController())
+                self?.switchToSomeVC(to: MainTabBarController())
             })
             .disposed(by: disposeBag)
         

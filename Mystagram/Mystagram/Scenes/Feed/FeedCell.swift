@@ -178,7 +178,15 @@ final class FeedCell: UICollectionViewCell {
         }
     }
     
-    func bind(profileButtonTapped: PublishRelay<Void>) {
+    func bind(collectionView: UICollectionView, profileButtonTapped: PublishRelay<IndexPath?>, cellDataModel: Feed) {
+        userNameButton.rx.tap
+            .map{
+                collectionView.indexPath(for: self)
+            }
+            .bind(to: profileButtonTapped)
+            .disposed(by: disposeBag)
+        
+        
         
     }
 }
